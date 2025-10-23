@@ -3,11 +3,82 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Page 2 – Broden Hall</title>
+  <title>All Things Broden — Schedule</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Second Page</h1>
-  <p>This is my second HTML page linked from the home page.</p>
-  <p><a href="index.html">Return to Home</a></p>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">All Things Broden</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="schedule.html" aria-current="page">Schedule</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Weekly Schedule</h1>
+    <p>Classes, office hours, and study blocks.</p>
+
+    <div class="table-wrap card">
+      <table class="schedule">
+        <caption>— Course Schedule, Fall 2025 —</caption>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>10:00–11:00</td>
+            <td>Office Hours</td>
+            <td></td>
+            <td>Office Hours</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>11:30–12:20</td>
+            <td>Data Security</td>
+            <td>Data Security</td>
+            <td>Data Security</td>
+            <td>Data Security</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2:00–3:15</td>
+            <td></td>
+            <td>Software Design</td>
+            <td></td>
+            <td>Software Design</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3:30–4:45</td>
+            <td></td>
+            <td>Data Communications</td>
+            <td></td>
+            <td>Data Communications</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Broden Hall</p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
