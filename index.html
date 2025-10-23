@@ -3,11 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Home Page – Broden Hall</title>
+  <title>All Things Broden</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Welcome to My HW6 Website</h1>
-  <p>This is my home page for BAIS 3300 Homework 6.</p>
-  <p><a href="second.html">Go to my second page</a></p>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">All Things Broden</a>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="schedule.html">Schedule</a></li>
+        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container grid">
+    <article class="content">
+      <figure class="hero card">
+        <img src="images/you-1.jpg" alt="Broden at a favorite spot" />
+        <figcaption>Hanging out in Iowa City.</figcaption>
+      </figure>
+
+      <section>
+        <h1>About Me</h1>
+        <p>Hey! I’m Broden—BAIS major, motorsports nerd, and builder of scrappy data projects. I like Python, SQL, dashboards, and a good road trip.</p>
+      </section>
+
+      <section>
+        <h2>Favorite Things</h2>
+        <ul>
+          <li>Weekend road trips with good coffee</li>
+          <li>Motorsports (F1, IMSA, IndyCar)</li>
+          <li>Wood-shop style projects & tinkering</li>
+          <li>Photography and dashboards</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Favorite Music</h2>
+        <ul>
+          <li>Green Day</li>
+          <li>Goo Goo Dolls</li>
+          <li>Chappell Roan</li>
+        </ul>
+      </section>
+    </article>
+
+    <aside class="sidebar">
+      <div class="card">
+        <h3>Links I Like</h3>
+        <ul>
+          <li><a href="https://www.reddit.com" target="_blank" rel="noopener">Reddit</a></li>
+          <li><a href="https://www.youtube.com" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://ana-white.com" target="_blank" rel="noopener">Ana White Projects</a></li>
+        </ul>
+      </div>
+
+      <figure class="card">
+        <img src="images/you-2.jpg" alt="Another photo of Broden" />
+        <figcaption>Weekend vibes.</figcaption>
+      </figure>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Broden Hall</p>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 </body>
 </html>
